@@ -42,7 +42,6 @@ public class TestApplication {
                 System.out.println("2. Add new student");
                 System.out.println("3. Change tokens");
                 System.out.println("4. Remove student");
-                System.out.println("5. Test REST API simulation");
                 System.out.println("0. Exit");
                 System.out.print("Choose: ");
 
@@ -87,15 +86,6 @@ public class TestApplication {
                             System.out.println("Student removed successfully!");
                             break;
 
-                        case "5":
-                            System.out.println("REST API Endpoints that would be available:");
-                            System.out.println("  GET /api/v1/getStatus");
-                            System.out.println("  GET /api/v1/students?role=teacher");
-                            System.out.println("  GET /api/v1/students/{lastName}/{firstName}?role=student");
-                            System.out.println("  POST /api/v1/students?role=teacher");
-                            System.out.println("  PUT /api/v1/students/{lastName}/{firstName}/tokens?role=teacher");
-                            System.out.println("  DELETE /api/v1/students/{lastName}/{firstName}?role=teacher");
-                            break;
 
                         case "0":
                             exit = true;
@@ -106,7 +96,7 @@ public class TestApplication {
                     }
                 } catch (Exception e) {
                     System.out.println("Error: " + e.getMessage());
-                    e.printStackTrace(); // Для отладки
+                    e.printStackTrace();
                 }
             }
             scanner.close();
@@ -114,7 +104,6 @@ public class TestApplication {
             System.err.println("Failed to start application: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Завершение работы
             UserContext.clear();
             if (context != null) {
                 context.close();

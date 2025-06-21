@@ -113,7 +113,7 @@ mvn clean install -U
 ```
 
 ### Проблемы с кодировкой
-В IntelliJ IDEA:
+В IntelliJ IDEA:    
 1. File → Settings → Editor → File Encodings
 2. Установите UTF-8 для всех полей
 

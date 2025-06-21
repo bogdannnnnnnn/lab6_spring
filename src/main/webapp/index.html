@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .api-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .api-link:hover {
+            background-color: #0056b3;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management API</h1>
+        <p>Welcome to the Student Management API. This API allows you to manage students and their token balances.</p>
+        
+        <h2>API Documentation</h2>
+        <a href="swagger-ui.html" class="api-link">Open Swagger UI</a>
+        
+        <h2>Available Endpoints</h2>
+        <div class="endpoint">GET /api/v1/getStatus - Check application status</div>
+        <div class="endpoint">GET /api/v1/students - Get all students</div>
+        <div class="endpoint">GET /api/v1/students/{lastName}/{firstName} - Get specific student</div>
+        <div class="endpoint">POST /api/v1/students - Add new student (teacher only)</div>
+        <div class="endpoint">PUT /api/v1/students/{lastName}/{firstName}/tokens - Change tokens (teacher only)</div>
+        <div class="endpoint">DELETE /api/v1/students/{lastName}/{firstName} - Remove student (teacher only)</div>
+        
+        <h2>Usage Notes</h2>
+        <ul>
+            <li>All endpoints accept an optional 'role' query parameter (student or teacher)</li>
+            <li>Some operations require teacher role</li>
+            <li>Use Swagger UI for interactive API testing</li>
+        </ul>
+    </div>
+</body>
+</html> 

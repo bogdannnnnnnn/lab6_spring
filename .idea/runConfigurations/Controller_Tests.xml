@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Controller Tests" type="JUnit" factoryName="JUnit">
+    <module name="lab6_spring" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="ru.bmstu.testapp.controller.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="ru.bmstu.testapp.controller" />
+    <option name="MAIN_CLASS_NAME" value="ru.bmstu.testapp.controller.StudentControllerTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component> 
